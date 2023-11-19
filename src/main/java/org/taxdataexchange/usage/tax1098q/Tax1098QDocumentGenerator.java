@@ -1,17 +1,17 @@
-package org.taxdataexchange.usage.tax1041k1;
+package org.taxdataexchange.usage.tax1098q;
 
 import org.taxdataexchange.core.utils.*;
-import org.taxdataexchange.docs.tax1041k1.models.*;
-import org.taxdataexchange.docs.tax1041k1.utils.*;
+import org.taxdataexchange.docs.tax1098q.models.*;
+import org.taxdataexchange.docs.tax1098q.utils.*;
 
-public class Tax1041K1DocumentGenerator {
+public class Tax1098QDocumentGenerator {
 
     public static TaxDataList sampleData( ) {
 
         // -----------------------------------------------------------------
         // Sample data
         // -----------------------------------------------------------------
-        TaxData taxData = SampleData.sampleTaxData( "Tax1041K1" );
+        TaxData taxData = SampleData.sampleTaxData( "Tax1098Q" );
         TaxDataList taxDataList = new TaxDataList( );
         taxDataList.addFormsItem( taxData );
 
@@ -27,10 +27,10 @@ public class Tax1041K1DocumentGenerator {
 
         TaxDataList taxDataList = sampleData( );
 
-        Tax1041K1PdfBuilder tax1041K1PdfBuilder = new Tax1041K1PdfBuilder( );
-        byte[] bytes = tax1041K1PdfBuilder.buildQr( taxDataList );
+        Tax1098QPdfBuilder pdfBuilder = new Tax1098QPdfBuilder( );
+        byte[] bytes = pdfBuilder.buildQr( taxDataList );
 
-        String filePath = "samples/Tax1041K1.sample.png";
+        String filePath = "samples/Tax1098Q.sample.png";
         FileUtils.bytesToFile( bytes, filePath );
         System.out.println( filePath );
 
@@ -49,10 +49,10 @@ public class Tax1041K1DocumentGenerator {
 
         String watermarkText = "Sample"; // Empty string for no watermark
 
-        Tax1041K1PdfBuilder tax1041K1PdfBuilder = new Tax1041K1PdfBuilder( );
-        byte[] pdfBytes = tax1041K1PdfBuilder.build( taxDataList, watermarkText );
+        Tax1098QPdfBuilder pdfBuilder = new Tax1098QPdfBuilder( );
+        byte[] pdfBytes = pdfBuilder.build( taxDataList, watermarkText );
 
-        String filePath = "samples/Tax1041K1.sample.pdf";
+        String filePath = "samples/Tax1098Q.sample.pdf";
         FileUtils.bytesToFile( pdfBytes, filePath );
         System.out.println( filePath );
 
@@ -60,30 +60,30 @@ public class Tax1041K1DocumentGenerator {
 
     public static void addTrailerPage() {
 
-        String filePath = "samples/Tax1041K1.original.pdf";
+        String filePath = "samples/Tax1098Q.original.pdf";
         byte[] pdfBytes = FileUtils.readByteArray( filePath );
 
-        // QR code including frame. See Tax1041K1.sample.png
+        // QR code including frame. See Tax1098Q.sample.png
         byte[] pngBytes = sampleQrAsPng( );
 
         // Place on existing pdf
         byte[] combinedBytes = TrailerPageAdder.insertPngIntoPdf( pngBytes, pdfBytes );
-        String filePath2 = "samples/Tax1041K1.trailer.pdf";
+        String filePath2 = "samples/Tax1098Q.trailer.pdf";
         FileUtils.bytesToFile( combinedBytes, filePath2 );
 
     }
 
     public static void addCoverPage() {
 
-        String filePath = "samples/Tax1041K1.original.pdf";
+        String filePath = "samples/Tax1098Q.original.pdf";
         byte[] pdfBytes = FileUtils.readByteArray( filePath );
 
-        // QR code including frame. See Tax1041K1.sample.png
+        // QR code including frame. See Tax1098Q.sample.png
         byte[] pngBytes = sampleQrAsPng( );
 
         // Place on existing pdf
         byte[] combinedBytes = CoverPageAdder.insertPngIntoPdf( pngBytes, pdfBytes );
-        String filePath2 = "samples/Tax1041K1.cover.pdf";
+        String filePath2 = "samples/Tax1098Q.cover.pdf";
         FileUtils.bytesToFile( combinedBytes, filePath2 );
 
     }
@@ -91,10 +91,10 @@ public class Tax1041K1DocumentGenerator {
     public static void insertQrCode() {
 
         // Existing document
-        String filePath = "samples/Tax1041K1.original.pdf";
+        String filePath = "samples/Tax1098Q.original.pdf";
         byte[] pdfBytes = FileUtils.readByteArray( filePath );
 
-        // QR code including frame. See Tax1041K1.sample.png
+        // QR code including frame. See Tax1098Q.sample.png
         byte[] pngBytes = sampleQrAsPng( );
 
         // Place on existing pdf
@@ -106,14 +106,14 @@ public class Tax1041K1DocumentGenerator {
             pageIndex,
             y
         );
-        String filePath2 = "samples/Tax1041K1.inserted.pdf";
+        String filePath2 = "samples/Tax1098Q.inserted.pdf";
         FileUtils.bytesToFile( combinedBytes, filePath2 );
 
     }
 
     public static void main(String[] args) {
 
-        System.out.println( "Tax1041K1DocumentGenerator Begin" );
+        System.out.println( "Tax1098QDocumentGenerator Begin" );
 
         // Create a new PDF
         samplePdf( );
@@ -127,7 +127,7 @@ public class Tax1041K1DocumentGenerator {
         // Add trailer page with QR code
         addTrailerPage( );
 
-        System.out.println( "Tax1041K1DocumentGenerator Done" );
+        System.out.println( "Tax1098QDocumentGenerator Done" );
 
     }
 
