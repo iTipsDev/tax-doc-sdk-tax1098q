@@ -1,0 +1,54 @@
+{
+  "taxYear" : 2025,
+  "accountId" : "47-306-9077",
+  "taxFormId" : "3495412",
+  "taxFormDate" : "2025-12-31",
+  "issuer" : {
+    "tin" : "00-0262682",
+    "partyType" : "BUSINESS",
+    "businessName" : {
+      "name1" : "Dietrich-Trantow"
+    },
+    "address" : {
+      "line1" : "004 Kuphal Ways",
+      "city" : "West Rodfurt",
+      "region" : "MN",
+      "postalCode" : "66378"
+    },
+    "phone" : {
+      "number" : "555-867-5309"
+    },
+    "email" : "september.rempel@hotmail.com"
+  },
+  "recipient" : {
+    "tin" : "000-65-0556",
+    "partyType" : "INDIVIDUAL",
+    "individualName" : {
+      "first" : "Daren",
+      "last" : "Runolfsson"
+    },
+    "address" : {
+      "line1" : "92858 Nader Port",
+      "city" : "Port Destinyburgh",
+      "region" : "AK",
+      "postalCode" : "46774"
+    },
+    "email" : "lowell.hettinger@yahoo.com"
+  },
+  "attributes" : [ ],
+  "links" : [ ],
+  "accountNumber" : "462-99458-5",
+  "planNumber" : "planNumber",
+  "planName" : "planName",
+  "planSponsorId" : "planSponsorId",
+  "annuityAmount" : 200,
+  "startDate" : "2025-02-15",
+  "canBeAccelerated" : true,
+  "totalPremiums" : 300,
+  "fairMarketValue" : 400,
+  "premiums" : [ {
+    "date" : "2025-02-09",
+    "description" : "Description",
+    "amount" : 500
+  } ]
+}

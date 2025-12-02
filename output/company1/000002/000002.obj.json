@@ -1,0 +1,54 @@
+{
+  "taxYear" : 2025,
+  "accountId" : "21-859-2612",
+  "taxFormId" : "7905463",
+  "taxFormDate" : "2025-12-31",
+  "issuer" : {
+    "tin" : "00-0262682",
+    "partyType" : "BUSINESS",
+    "businessName" : {
+      "name1" : "Dietrich-Trantow"
+    },
+    "address" : {
+      "line1" : "004 Kuphal Ways",
+      "city" : "West Rodfurt",
+      "region" : "MN",
+      "postalCode" : "66378"
+    },
+    "phone" : {
+      "number" : "555-867-5309"
+    },
+    "email" : "september.rempel@hotmail.com"
+  },
+  "recipient" : {
+    "tin" : "000-51-4823",
+    "partyType" : "INDIVIDUAL",
+    "individualName" : {
+      "first" : "Teresa",
+      "last" : "Stroman"
+    },
+    "address" : {
+      "line1" : "127 Dallas Pike",
+      "city" : "Port Rosellaberg",
+      "region" : "IA",
+      "postalCode" : "66322"
+    },
+    "email" : "randy.champlin@gmail.com"
+  },
+  "attributes" : [ ],
+  "links" : [ ],
+  "accountNumber" : "950-40309-1",
+  "planNumber" : "planNumber",
+  "planName" : "planName",
+  "planSponsorId" : "planSponsorId",
+  "annuityAmount" : 200,
+  "startDate" : "2025-05-13",
+  "canBeAccelerated" : true,
+  "totalPremiums" : 300,
+  "fairMarketValue" : 400,
+  "premiums" : [ {
+    "date" : "2025-01-03",
+    "description" : "Description",
+    "amount" : 500
+  } ]
+}
